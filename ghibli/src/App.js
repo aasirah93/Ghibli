@@ -1,29 +1,50 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const [items, setItems] = useState([]);
+  const[isLoading, setIsLoading] = useState(true);
 
-fetch('https://api.github.com/users/hacktivist123/repos')
+  const fetchData = () => {fetch('https://ghibliapi.herokuapp.com/films')
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(
+  (data) => {
+  
+  setItems(result);
+  setIsLoading(false);
 
+},
+
+)}
+
+useEffect(() => {
+  fetchData()
+}, [])
+console.log(items)
+
+ return (
+
+   isLoading?  (<h1>Loading...</h1>)  :
+   <div>
+     <ul>
+     {items && items.map(item => (
+     <li key = {item.id}>
+     <h1> {item.rocket_name}</h1>
+     <p>
+     <a href={item.id}> 
+     &nbsp;&nbsp;
+     {item.wikipedia}</a>
+     </p>
+     <p>{item.description}</p>
+     <img src={item.flickr_images} alt="Rockets" width="500" height="600"/>
+     </li>
+     ))}
+     </ul>
+  </div>
+   )
+}
 export default App;
+
+
+
