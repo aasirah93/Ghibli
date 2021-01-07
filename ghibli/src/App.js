@@ -11,7 +11,7 @@ function App() {
   .then(
   (data) => {
   
-  setItems(result);
+  setItems(data);
   setIsLoading(false);
 
 },
@@ -30,16 +30,9 @@ console.log(items)
      <ul>
      {items && items.map(item => (
      <li key = {item.id}>
-     <h1> {item.rocket_name}</h1>
-     <p>
-     <a href={item.id}> 
-     &nbsp;&nbsp;
-     {item.wikipedia}</a>
-     </p>
-     <p>{item.description}</p>
-     <img src={item.flickr_images} alt="Rockets" width="500" height="600"/>
-     </li>
-     ))}
+     <h1> {item.title}</h1>
+     </li>)
+     )}
      </ul>
   </div>
    )
