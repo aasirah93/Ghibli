@@ -1,7 +1,18 @@
+
+/* ol {list-style-type: none;
+}; */
+
 .box{
   border: 5px red solid;
   border-width: 3px;
   border-style: thick;
+  border-radius : 10px;
+  width: 300px;
+  float: left;
   margin: 20px 0;
   padding: 20px;
+  font-size: 20px;
 };
+
+
+

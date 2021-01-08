@@ -27,13 +27,13 @@ console.log(items)
 
    isLoading?  (<h1>Loading...</h1>)  :
    <div>
-     <ul>
+     <ol style={{ listStyleType: "none" }}>
      {items && items.map(item => (
      <li key = {item.id}>
-     <h1 class = "box"> {item.title}</h1>
+     <h1 class="box"> {item.title}</h1>
      </li>)
      )}
-     </ul>
+     </ol>
   </div>
    )
 }
