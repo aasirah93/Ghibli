@@ -30,7 +30,10 @@ console.log(items)
      <ol style={{ listStyleType: "none" }}>
      {items && items.map(item => (
      <li key = {item.id}>
-     <h1 class="box"> {item.title}</h1>
+    <div class="box">
+     <h1> {item.title}</h1>
+     <p>{item.description}</p>
+     </div>
      </li>)
      )}
      </ol>
