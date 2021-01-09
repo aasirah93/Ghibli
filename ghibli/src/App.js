@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import Header from './components/Header.js';
 
 
 function App() {
@@ -26,12 +27,17 @@ console.log(items)
  return (
 
    isLoading?  (<h1>Loading...</h1>)  :
+
+
    <div>
+     <Header/>
      <ol style={{ listStyleType: "none" }}>
      {items && items.map(item => (
      <li key = {item.id}>
     <div class="box">
      <h1> {item.title}</h1>
+     <h2> Director {item.director}</h2>
+     <h3 class="font-size"> Released {item.release_date}</h3>
      <p>{item.description}</p>
      </div>
      </li>)
