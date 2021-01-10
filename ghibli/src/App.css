@@ -17,6 +17,13 @@
   font-size: 10px;
 };
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+};
+
 .flip-card {
   background-color: transparent;
   width: 300px;
