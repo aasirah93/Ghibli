@@ -2,11 +2,16 @@
 /* ol {list-style-type: none;
 }; */
 
+*{
+  background: deepskyblue
+}
+
 .box{
   border: 5px red solid;
   border-width: 3px;
   border-style: thick;
   border-radius : 10px;
+  background: white;
   width: 300px;
   float: left;
   margin: 0 20px 20px 0;
@@ -15,6 +20,7 @@
 
 .font-size{
   font-size: 10px;
+  background: white
 };
 
 .center {
