@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<h1>
+  Loading...
+</h1>
+`;
+
+exports[`retrieves data 1`] = `
+<h1>
+  Loading...
+</h1>
+`;
