@@ -1,37 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import Header from './components/Header.js';
+import Ghibli from './components/Ghibli.js';
 
 
 function App() {
-  const [items, setItems] = useState([]);
-  const[isLoading, setIsLoading] = useState(true);
+//   const [items, setItems] = useState([]);
+//   const[isLoading, setIsLoading] = useState(true);
 
-  const fetchData = () => {fetch('https://ghibliapi.herokuapp.com/films')
-  .then(response => response.json())
-  .then(
-  (data) => {
+//   const fetchData = () => {fetch('https://ghibliapi.herokuapp.com/films')
+//   .then(response => response.json())
+//   .then(
+//   (data) => {
   
-  setItems(data);
-  setIsLoading(false);
+//   setItems(data);
+//   setIsLoading(false);
 
-},
+// },
 
-)}
+// )}
 
-useEffect(() => {
-  fetchData()
-}, [])
-console.log(items)
+// useEffect(() => {
+//   fetchData()
+// }, [])
+// console.log(items)
 
- return (
+//  return (
 
-   isLoading?  (<h1>Loading...</h1>)  :
+//    isLoading?  (<h1>Loading...</h1>)  :
 
 
    <div>
      <Header/>
-     <ol style={{ listStyleType: "none" }}>
+     <Ghibli/>
+     {/* <ol style={{ listStyleType: "none" }}>
      {items && items.map(item => (
      <li key = {item.id}>
     <div class="box">
@@ -42,9 +44,9 @@ console.log(items)
      </div>
      </li>)
      )}
-     </ol>
+     </ol> */}
   </div>
-   )
+  //  )
 }
 export default App;
 
