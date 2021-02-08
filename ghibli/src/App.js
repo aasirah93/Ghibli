@@ -28,7 +28,7 @@ function App() {
 //  return (
 
 //    isLoading?  (<h1>Loading...</h1>)  :
-
+return(
 
    <div>
      <Header/>
@@ -47,6 +47,7 @@ function App() {
      </ol> */}
   </div>
   //  )
+)
 }
 export default App;
 
