@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header.js';
+import Searchbar from './components/Searchbar.js'
 import Ghibli from './components/Ghibli.js';
 
 
@@ -30,8 +31,9 @@ function App() {
 //    isLoading?  (<h1>Loading...</h1>)  :
 return(
 
-   <div>
+   <div class = "background">
      <Header/>
+     <Searchbar/>
      <Ghibli/>
      {/* <ol style={{ listStyleType: "none" }}>
      {items && items.map(item => (

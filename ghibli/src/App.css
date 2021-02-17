@@ -2,8 +2,9 @@
 /* ol {list-style-type: none;
 }; */
 
-*{
-  background: deepskyblue
+
+.background{
+    background-color: #282c34;
 }
 
 .box{

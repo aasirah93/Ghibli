@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-// const[fetch] = fetch('https://ghibliapi.herokuapp.com/films')
+
 
 function Ghibli() {
     const [items, setItems] = useState([]);
     const[isLoading, setIsLoading] = useState(true);
   
-    const fetchData = () => {fetch('https://ghibliapi.herokuapp.com/films')
+    const fetchData = () => fetch('https://ghibliapi.herokuapp.com/films')
     .then(response => response.json())
     .then(
     (data) => {
@@ -16,7 +16,7 @@ function Ghibli() {
   
   },
   
-  )}
+  )
   
   useEffect(() => {
     fetchData()
@@ -28,8 +28,7 @@ function Ghibli() {
      isLoading?  (<h1>Loading...</h1>)  :
   
   
-     <div>
-       {/* <Header/> */}
+     <div class = "background">
        <ol style={{ listStyleType: "none" }}>
        {items && items.map(item => (
        <li key = {item.id}>
@@ -44,6 +43,6 @@ function Ghibli() {
        </ol>
     </div>
      )
-  }
+       }
 
   export default Ghibli
