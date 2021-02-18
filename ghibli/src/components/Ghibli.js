@@ -28,8 +28,8 @@ function Ghibli() {
      isLoading?  (<h1>Loading...</h1>)  :
   
   
-     <div class = "background">
-       <ol style={{ listStyleType: "none" }}>
+     <div>
+       <ol style={{ listStyleType: "none"}}>
        {items && items.map(item => (
        <li key = {item.id}>
       <div class="box">
