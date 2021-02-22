@@ -1,8 +1,8 @@
 
 
-function Searchbar({item}){
+function Searchbar(){
 
-  const [filter, setFilter] = React.useState("");
+  const [search, setSearch] = React.useState("");
 
 
 
@@ -18,19 +18,6 @@ return (
         height: '30px'
       }} containerStyle={{Color: 'white'}} inputStyle={{backgroundColor: 'white'}} 
       placeholder= "Search Movies" value={filter} onChange={(e) => setFilter(e.target.value)}/>
-      <ul>
-      {item.map(p => { 
-               if(filter.length !== 0){
-                   if(p.startsWith(filter)){
-                    return <h4 style={{ color: 'Blue'}}>
-                        {p}
-                        </h4> 
-                //    }else{
-                //        return null
-                   }
-                }
-           })}
-      </ul>
       </label>
     </div>
     )
