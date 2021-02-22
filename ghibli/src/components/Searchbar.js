@@ -1,4 +1,5 @@
 
+import React, { useState, useEffect } from 'react';
 
 function Searchbar(){
 
@@ -11,14 +12,12 @@ return (
     
     <div>
 
-      <label>
-      Search Film
       <input type="text" style={{
         width: '200px',
         height: '30px'
       }} containerStyle={{Color: 'white'}} inputStyle={{backgroundColor: 'white'}} 
-      placeholder= "Search Movies" value={filter} onChange={(e) => setFilter(e.target.value)}/>
-      </label>
+      placeholder= "Search Movies" onChange={(e) => setSearch}/>
+      <button>Search Movies</button>
     </div>
     )
 }

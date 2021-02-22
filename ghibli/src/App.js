@@ -33,7 +33,7 @@ return(
 
    <div class = "background">
      <Header/>
-     <Searchbar item={item}/>
+     <Searchbar/>
      <Ghibli/>
      {/* <ol style={{ listStyleType: "none" }}>
      {items && items.map(item => (
