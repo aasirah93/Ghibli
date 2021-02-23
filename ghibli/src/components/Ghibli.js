@@ -22,11 +22,17 @@ function Ghibli() {
     fetchData()
   }, [])
   console.log(items)
+
+  
+
   
    return (
   
-     isLoading?  (<h1>Loading...</h1>)  :
-  
+     isLoading?  (<h1>Loading...</h1>):
+      
+
+
+     
   
      <div>
        <ol style={{ listStyleType: "none"}}>

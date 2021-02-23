@@ -5,10 +5,9 @@ function Searchbar(){
 
   const [search, setSearch] = React.useState("");
 
-
-
 return (
 
+   
     
     <div>
 
@@ -20,7 +19,9 @@ return (
       <button>Search Movies</button>
     </div>
     )
+
 }
+
 
 
 export default Searchbar
