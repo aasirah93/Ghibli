@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 function Searchbar(){
 
-  const [search, setSearch] = React.useState("");
+  const [search, setSearch] = useState("");
 
 return (
 
