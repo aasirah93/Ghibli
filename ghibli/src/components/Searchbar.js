@@ -15,7 +15,7 @@ return (
         width: '200px',
         height: '30px'
       }} containerStyle={{Color: 'white'}} inputStyle={{backgroundColor: 'white'}} 
-      placeholder= "Search Movies" onChange={(e) => setSearch}/>
+      placeholder= "Search Movies" onChange={(e) => setSearch(e.target.value)}/>
       <button>Search Movies</button>
     </div>
     )
