@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
+import Searchbar from './Searchbar.js'
 
 
 function Ghibli() {
     const [items, setItems] = useState([]);
     const[isLoading, setIsLoading] = useState(true);
+    
+    
   
     const fetchData = () => fetch('https://ghibliapi.herokuapp.com/films')
     .then(response => response.json())
@@ -25,15 +27,21 @@ function Ghibli() {
 
   
 
+
   
-   return (
-  
-     isLoading?  (<h1>Loading...</h1>):
+     if (isLoading) 
+     
+     {return (<h1>Loading...</h1>);}
       
 
 
-     
-  
+     const filteredItems = items.filter (
+       item => {
+         return item.name.toLowerCase().includes (search.toLowerCase() )
+       }
+     )
+    
+     return (
      <div>
        <ol style={{ listStyleType: "none"}}>
        {items && items.map(item => (
@@ -48,7 +56,8 @@ function Ghibli() {
        )}
        </ol>
     </div>
-     )
+)
        }
-
+  
+      
   export default Ghibli
