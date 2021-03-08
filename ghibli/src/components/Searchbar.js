@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-function Searchbar(){
+function Searchbar({item}){
 
   const [search, setSearch] = useState("");
 

@@ -35,7 +35,7 @@ function Ghibli() {
       
 
 
-     const filteredItems = items.filter ({prop}
+     const filteredItems = items.filter (
        item => {
          return item.name.toLowerCase().includes (search.toLowerCase() )
        }
