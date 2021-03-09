@@ -15,8 +15,21 @@ return (
         width: '200px',
         height: '30px'
       }} containerStyle={{Color: 'white'}} inputStyle={{backgroundColor: 'white'}} 
-      placeholder= "Search Movies" onChange={(e) => setSearch(e.target.value)}/>
-      <button>Search Movies</button>
+      placeholder= "Search Movies" value={search} onChange={(e) => setSearch(e.target.value)}/>
+       <ul>
+           {item.map(p => { 
+               if(filter.length !== 0){
+                   if(p.startsWith(filter)){
+                    return <h4 style={{ color: 'Blue'}}>
+                        {p}
+                        </h4> 
+                //    }else{
+                //        return null
+                   }
+                }
+           })}
+           </ul>
+      {/* <button>Search Movies</button> */}
     </div>
     )
 
