@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Searchbar from './Searchbar.js'
+
 
 
 function Ghibli() {
@@ -35,11 +35,11 @@ function Ghibli() {
       
 
 
-     const filteredItems = items.filter (
-       item => {
-         return item.name.toLowerCase().includes (search.toLowerCase() )
-       }
-     )
+    //  const filteredItems = items.filter (
+    //    item => {
+    //      return item.name.toLowerCase().includes (filter.toLowerCase() )
+    //    }
+    //  )
     
      return (
      <div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+// import Key from'./components/Key.js';
 import Header from './components/Header.js';
 import Searchbar from './components/Searchbar.js'
 import Ghibli from './components/Ghibli.js';
@@ -32,6 +33,7 @@ function App() {
 return(
 
    <div class = "background">
+     {/* <Key items={items}/> */}
      <Header/>
      <Searchbar/>
      <Ghibli/>
